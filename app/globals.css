@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* For removing the border when the canvas is focused. */
+canvas:focus {
+    outline: none !important;
+}
