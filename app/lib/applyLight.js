@@ -59,11 +59,11 @@ function applyEnvironmentTexture(scene) {
 function addPointLights(scene) {
   // Define point lights with their respective positions and properties
   const pointLights = [
-
-    { name: 'pointLight3', position: new Vector3(3, 2.7, 0), intensity: 0.4, range: 10 },
-    { name: 'pointLight4', position: new Vector3(-3, 2.7, 0), intensity: 0.4, range: 10 },
-    { name: 'pointLight1', position: new Vector3(-1.6, 2.7, 0), intensity: 0.4, range: 10 },
-    { name: 'pointLight2', position: new Vector3(0.6, 2.7, 1), intensity: 0.4, range: 4 },
+    // { name: 'pointLight1', position: new Vector3(-1.6, 2.7, 0), intensity: 0.3, range: 10 },
+    // { name: 'pointLight2', position: new Vector3(0.6, 2.7, 1), intensity: 0.3, range: 10 },
+    { name: 'pointLight3', position: new Vector3(3, 2.7, 0), intensity: 0.3, range: 50 },
+    { name: 'pointLight4', position: new Vector3(-3, 2.7, 0), intensity: 0.3, range: 50 },
+    { name: 'pointLight5', position: new Vector3(0, 2.7, 0), intensity: 0.3, range: 50 },
   ];
 
   pointLights.forEach(lightInfo => {
