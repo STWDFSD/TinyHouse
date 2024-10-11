@@ -75,6 +75,7 @@ export default function applyMaterials(meshes, scene) {
   const windowsFrameExtra =
     "/Textures/Black Aluminio/Black Alumin_specular.jpg";
 
+
   meshes.forEach((mesh) => {
     mesh.receiveShadows = true;
 
@@ -146,8 +147,34 @@ export default function applyMaterials(meshes, scene) {
         // const tempMaterial = new BABYLON.StandardMaterial('material', scene)
         // tempMaterial.diffuseTexture = texture;
         // mesh.material = tempMaterial;
+
+        const createWallMaterial = (scene) => {
+          const pbr = new BABYLON.PBRMaterial("pbr", scene);
+
+          // Set base color (albedo)
+          pbr.albedoColor = new BABYLON.Color3(1.0, 1.0, 1.0); // White color
+
+          // Set metallic and roughness properties
+          pbr.metallic = 0; // Non-metallic, typical for walls
+          pbr.roughness = 0;
+          pbr.alpah = 0;
+
+          pbr.clearCoat.isEnabled = true;
+          pbr.clearCoat.intensity = 1.0;
+          pbr.clearCoat.roughness = 0.1;
+
+          // pbr.bumpTexture = new BABYLON.Texture("path/to/normal_map.jpg", scene);
+
+          return pbr;
+        }
+
+        // Usage
+        const wallMaterial = createWallMaterial(scene);
+        mesh.material = wallMaterial;
+
+        // mesh.material = wallMaterial;
         applyTexture(mesh, interiorWallWood);
-        mesh.material.specularColor = new Color3(0.2, 0.2, 0.2);
+        // mesh.material.specularColor = new Color3(0.2, 0.2, 0.2);
         break;
       // Interior Floor
       case "chao interior":

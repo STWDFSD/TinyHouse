@@ -35,6 +35,7 @@ let engine;
 let canvas;
 let global_meshes;
 
+
 function onSceneReady(sceneReady) {
   // Get canvas from scene.
   scene = sceneReady;
@@ -70,7 +71,7 @@ function onSceneReady(sceneReady) {
   // livingRoomCamera.inputs.removeByType("FreeCameraKeyboardMoveInput");
   // livingRoomCamera.inputs.removeByType("FreeCameraMouseInput");
   livingRoomCamera.attachControl(canvas, true);
-  livingRoomCamera.speed = 0.1;
+  livingRoomCamera.speed = 0.05;
   livingRoomCamera.inertia = 0.9;
 
   livingRoomCamera.keysUp.push(87); // W key
@@ -195,7 +196,7 @@ function onClickInteriorWallsColorChange(color) {
     if (mesh.name === "paredes interior.001" || mesh.name === "teto") {
       if (color === "red") {
         mesh.material.diffuseColor = new BABYLON.Color3(
-          244 / 255,
+          254 / 255,
           101 / 255,
           101 / 255
         );
