@@ -61,9 +61,9 @@ function addPointLights(scene) {
   const pointLights = [
     // { name: 'pointLight1', position: new Vector3(-1.6, 2.7, 0), intensity: 0.3, range: 10 },
     // { name: 'pointLight2', position: new Vector3(0.6, 2.7, 1), intensity: 0.3, range: 10 },
-    { name: 'pointLight3', position: new Vector3(3, 2.7, 0), intensity: 0.3, range: 50 },
-    { name: 'pointLight4', position: new Vector3(-3, 2.7, 0), intensity: 0.3, range: 50 },
-    { name: 'pointLight5', position: new Vector3(0, 2.7, 0), intensity: 0.3, range: 50 },
+    { name: 'pointLight3', position: new Vector3(3, 2.7, 0), intensity: 0.4, range: 50 },
+    { name: 'pointLight4', position: new Vector3(-3, 2.7, 0), intensity: 0.4, range: 50 },
+    { name: 'pointLight5', position: new Vector3(0, 2.7, 0), intensity: 0.4, range: 50 },
   ];
 
   pointLights.forEach(lightInfo => {
